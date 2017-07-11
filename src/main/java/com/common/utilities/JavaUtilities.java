@@ -1,5 +1,6 @@
 package com.common.utilities;
 
+import java.lang.management.ManagementFactory;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,4 +21,8 @@ public class JavaUtilities {
 			    .sorted()
 			    .forEach(System.out::println);
 	}
+	public long[] getAppThreads(){
+		return ManagementFactory.getThreadMXBean().getAllThreadIds();
+	}
+	
 }
