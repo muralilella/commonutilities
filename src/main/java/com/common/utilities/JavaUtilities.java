@@ -1,17 +1,15 @@
 package com.common.utilities;
 
-import java.lang.management.ManagementFactory;
-import java.util.Arrays;
 import java.util.List;
 
 public class JavaUtilities {
 
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		JavaUtilities javaUtilities = new JavaUtilities();
 		List<String> myList =
 			    Arrays.asList("a1", "a2", "b1", "c2", "c1");
 		javaUtilities.printArray(myList);
-	}
+	}*/
 
 	public void printArray(List<String> myList){
 			myList
@@ -20,9 +18,6 @@ public class JavaUtilities {
 			    .map(String::toUpperCase)
 			    .sorted()
 			    .forEach(System.out::println);
-	}
-	public long[] getAppThreads(){
-		return ManagementFactory.getThreadMXBean().getAllThreadIds();
 	}
 	
 }
